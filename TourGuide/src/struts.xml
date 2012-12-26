@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+
+	<!-- Some or all of these can be flipped to true for debugging -->
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<constant name="struts.i18n.reload" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.configuration.xml.reload" value="false" />
+	<constant name="struts.custom.i18n.resources" value="globalMessages" />
+	<constant name="struts.action.extension" value="action,," />
+	<constant name="struts.multipart.maxSize" value="100000000" />
+
+	<constant name="struts.convention.result.path" value="/" />
+
+	<constant name="struts.serve.static" value="true" />
+	<constant name="struts.serve.static.browserCache" value="false" />
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+
+	<package name="default" extends="struts-default" namespace="/guide">
+		<action name="getGuideScore" class="guideAction" method="getScoreAction">
+			<result name="success" type="freemarker">/WEB-INF/flt/score.flt</result>
+			<result name="input">/index.jsp</result>
+		</action>
+	</package>
+	
+	<package name="upload" extends="struts-default" namespace="/">
+		<action name="upload" class="uploadAction">
+			<result name="success" type="redirect">/ul.jsp</result>
+		</action>
+	</package>
+</struts>
