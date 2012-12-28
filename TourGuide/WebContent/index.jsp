@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>导游考试成绩查询系统</title>
+<title>陕西省2012年出境旅游领队考试成绩查询系统</title>
 <link type="text/css" rel="stylesheet"
 	href="<%=basePath%>js/formvalidator/style/validator.css"></link>
 <script type="text/javascript" src="<%=basePath%>js/jquery-1.8.3.min.js"></script>
@@ -56,7 +56,7 @@ body,td,th {
 </head>
 
 <body>
-	<h2 style="text-align: center;">导游考试成绩查询系统</h2>
+	<h2 style="text-align: center;">陕西省2012年出境旅游领队考试成绩查询系统</h2>
 		<form id="scoreForm" action="<%=basePath%>guide/getGuideScore.action" 
 			method="post">
 			<s:token />
@@ -69,7 +69,7 @@ body,td,th {
 					<td><div id="nameTip" style="width: 250px"></div></td>
 				</tr>
 				<tr>
-					<td align="right">准考证号:</td>
+					<td align="right">考生考号:</td>
 					<td><input type="text" id="examnum" name="examnum" autocomplete="off"
 						style="width: 220px;height: 30px;font-size: 20px" value="" /></td>
 					<td><div id="examnumTip" style="width: 250px"></div></td>

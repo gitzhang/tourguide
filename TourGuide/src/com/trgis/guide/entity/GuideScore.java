@@ -22,7 +22,16 @@ public class GuideScore {
 	private String id;
 
 	@Column
+	private String serializableNumber;
+
+	@Column
 	private String name;
+
+	@Column
+	private String gender;
+
+	@Column
+	private String workCompany;
 
 	@Column
 	private String identification;
@@ -31,17 +40,34 @@ public class GuideScore {
 	private String examnum;
 
 	@Column
-	private Double score;
+	private String leader;
+
+	@Column
+	private String tourPlace;
+
+	@Column
+	private String leaderEnglish;
+
+	@Column
+	private String score;
 
 	public GuideScore() {
 	}
 
-	public GuideScore(String id, String name, String identification,
-			String examnum, Double score) {
+	public GuideScore(String id, String serializableNumber, String name,
+			String gender, String workCompany, String identification,
+			String examnum, String leader, String tourPlace,
+			String leaderEnglish, String score) {
 		this.id = id;
+		this.serializableNumber = serializableNumber;
 		this.name = name;
+		this.gender = gender;
+		this.workCompany = workCompany;
 		this.identification = identification;
 		this.examnum = examnum;
+		this.leader = leader;
+		this.tourPlace = tourPlace;
+		this.leaderEnglish = leaderEnglish;
 		this.score = score;
 	}
 
@@ -69,11 +95,11 @@ public class GuideScore {
 		this.examnum = examnum;
 	}
 
-	public Double getScore() {
+	public String getScore() {
 		return score;
 	}
 
-	public void setScore(Double score) {
+	public void setScore(String score) {
 		this.score = score;
 	}
 
@@ -84,5 +110,53 @@ public class GuideScore {
 	public void setIdentification(String identification) {
 		this.identification = identification;
 	}
-	
+
+	public String getSerializableNumber() {
+		return serializableNumber;
+	}
+
+	public void setSerializableNumber(String serializableNumber) {
+		this.serializableNumber = serializableNumber;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getWorkCompany() {
+		return workCompany;
+	}
+
+	public void setWorkCompany(String workCompany) {
+		this.workCompany = workCompany;
+	}
+
+	public String getLeader() {
+		return leader;
+	}
+
+	public void setLeader(String leader) {
+		this.leader = leader;
+	}
+
+	public String getTourPlace() {
+		return tourPlace;
+	}
+
+	public void setTourPlace(String tourPlace) {
+		this.tourPlace = tourPlace;
+	}
+
+	public String getLeaderEnglish() {
+		return leaderEnglish;
+	}
+
+	public void setLeaderEnglish(String leaderEnglish) {
+		this.leaderEnglish = leaderEnglish;
+	}
+
 }

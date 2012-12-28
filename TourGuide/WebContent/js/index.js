@@ -21,20 +21,21 @@ $(function() {
 	});
 	
 	$("#examnum").formValidator({
-		onShow : "请输入准考证号",
-		onFocus : "准考证号不能为空",
+		onShow : "请输入考生考号",
+		onFocus : "考生考号不能为空",
 		onCorrect : "完成"
 	}).inputValidator({
 		min : 1,
-		onErrorMin : "准考证号不能为空,请确认"
+		onErrorMin : "考生考号不能为空,请确认"
 	});
 	
 	$("#sfzh").formValidator({
 		onShow : "请输入15或18位的身份证",
 		onFocus : "输入15或18位的身份证",
 		onCorrect : "完成"
-	}).functionValidator({
-		fun : isCardID
+	}).inputValidator({
+		min:15,
+		onErrorMin:"请输入15或18位身份证号"
 	});
 	
 	$('#verifycode').formValidator({

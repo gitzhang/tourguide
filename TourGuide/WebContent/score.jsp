@@ -70,24 +70,40 @@ body,td,th {
 </head>
 
 <body>
-	<h3>查詢成功!</h3>
+	<h3>陕西省2012年出境旅游领队考试成绩</h3>
 
-	<table id="mytable" align="center" cellspacing="0" summary="成绩查询结果">
+	<table id="mytable" align="center" cellspacing="0" >
 		<tr>
-			<td class="row">考生姓名</td>
+			<td class="row">姓名</td>
 			<td class="row">${guideScore.name}</td>
 		</tr>
 		<tr>
-			<td class="row">准考证号</td>
+			<td class="row">性别</td>
+			<td class="row">${guideScore.gender}</td>
+		</tr>
+		<tr>
+			<td class="row">单位</td>
+			<td class="row">${guideScore.workCompany}</td>
+		</tr>
+		<tr>
+			<td class="row">考号</td>
 			<td class="row">${guideScore.examnum}</td>
 		</tr>
 		<tr>
-			<td class="row">身份证号</td>
-			<td class="row">${guideScore.identification}</td>
+			<td class="row">领队实务</td>
+			<td class="row">${guideScore.leader}</td>
+		</tr>
+		<tr>
+			<td class="row">旅游目的地</td>
+			<td class="row">${guideScore.tourPlace}</td>
+		</tr>
+		<tr>
+			<td class="row">领队英语</td>
+			<td class="row">${guideScore.leaderEnglish}</td>
 		</tr>
 		<tr>
 			<td class="row">考试成绩</td>
-			<td class="row"><font size="18">${guideScore.score}</font></td>
+			<td class="row"><font size="12">${guideScore.score}</font></td>
 		</tr>
 	</table>
 	<p>

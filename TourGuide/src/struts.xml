@@ -28,10 +28,11 @@
 			<result name="input">/index.jsp</result>
 		</action>
 	</package>
-	
+
 	<package name="upload" extends="struts-default" namespace="/">
-		<action name="upload" class="uploadAction">
-			<result name="success" type="redirect">/ul.jsp</result>
+		<action name="uploadFile" class="uploadAction">
+			<result name="success">/ulsuccess.jsp</result>
+			<result name="error">/ulerror.jsp</result>
 		</action>
 	</package>
 </struts>
